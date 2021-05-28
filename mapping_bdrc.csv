@@ -1,0 +1,240 @@
+0,bdr:P1583,bdo:personName,bdr:NMFB54273C9888828B
+1,bdr:P1583,bdo:personName,bdr:NM6E5B539FC14B81F1
+2,bdr:P314,bdo:personStudentOf,bdr:P1583
+3,bdr:NTB25CDA7F05164BEA,rdf:type,bdo:Note
+4,bdr:P2JM202,bdo:personStudentOf,bdr:P1583
+5,bda:P1583,adm:logEntry,bda:LG0648F5705843763B
+6,bdr:P1583,bdo:personTeacherOf,bdr:P5911
+7,bdr:P2JM207,bdo:personStudentOf,bdr:P1583
+8,bdr:NMF942A81B0A73E4AA,rdfs:label,tshul khrims blo gros/
+9,bdr:P2JM196,bdo:personStudentOf,bdr:P1583
+10,bda:LG757F77D8BA18E640,adm:logDate,2008-07-02T17:03:41.750000+00:00
+11,bdr:P8528,bdo:hasFather,bdr:P1583
+12,bdr:P1587,bdo:personTeacherOf,bdr:P1583
+13,bdr:NTABB307C08F280C09,bdo:noteText,"biodata
+
+Subsequent main lineage holders include lha btsun chen po/ gter chen 'gyur med rdo rje/ 'bri gung rin chen phun tshogs/ rig 'dzin 'jigs med gling pa/ mi 'gyur nam mkha'i rdo rje/ 'jam dbyangs mkhyen brtse'i dbang po
+
+Among them, 'jigs med gling pa received the nye brgyud via direct vision of klong chen pa.  'jigs med gling pa passed his lineage to rdo grub phrin las 'od zer, who passed it to mi 'gyur nam mkha' rdo rje, who in turn had a vision of klong chen pa and received the yang tig from him."
+14,bdr:P2JM195,bdo:personStudentOf,bdr:P1583
+15,bda:LGAF7D0940EAE3607E,adm:logDate,2008-06-30T17:01:56.496000+00:00
+16,bda:P1583,adm:logEntry,bda:LGAF7D0940EAE3607E
+17,bdr:P2085,bdo:personTeacherOf,bdr:P1583
+18,bda:P1583,adm:logEntry,bda:LG663351B387DD33FA
+19,bdr:P1583,bdo:personStudentOf,bdr:P2349
+20,bdr:NT93D338F6A346B51D,bdo:noteText,"biography
+dates: 1308-1363"
+21,bdr:P8528,bdo:kinWith,bdr:P1583
+22,bda:LGE1683F39A3E5756E,adm:logWho,ns1:U00007
+23,bdr:P1583,bdo:personTeacherOf,bdr:P2JM204
+24,bdr:P1583,bdo:note,bdr:NTB25CDA7F05164BEA
+25,bdr:P144,bdo:personTeacherOf,bdr:P1583
+26,bdr:EVDD9AB2BD104D0A7D,bdo:eventWhere,bdr:G967
+27,bdr:P1583,bdo:personTeacherOf,bdr:P8764
+28,bdr:P1583,bdo:personTeacherOf,bdr:P2JM192
+29,bdr:P66,bdo:personTeacherOf,bdr:P1583
+30,bdr:P1583,bdo:personStudentOf,bdr:P1588
+31,bda:LGAF7D0940EAE3607E,adm:logWho,ns1:U00015
+32,bdr:P2349,bdo:personTeacherOf,bdr:P1583
+33,bdr:P1583,bdo:hasChild,bdr:P8528
+34,bdr:P2JM203,bdo:personStudentOf,bdr:P1583
+35,bdr:P1583,bdo:personStudentOf,bdr:P2JM187
+36,bda:LG0648F5705843763B,adm:logMessage,edited names
+37,bdr:P2JM185,bdo:personTeacherOf,bdr:P1583
+38,bdr:P2JM188,bdo:personTeacherOf,bdr:P1583
+39,bdr:P2JM206,bdo:personStudentOf,bdr:P1583
+40,bdr:NT93D338F6A346B51D,bdo:noteSource,bdr:MW25268
+41,bdr:P1583,bdo:hasParent,bdr:P1584
+42,bdr:P8764,bdo:personStudentOf,bdr:P1583
+43,bda:P1583,adm:logEntry,bda:LG757F77D8BA18E640
+44,bdr:NTE1C8F77F6AFC308F,bdo:noteText,"Teachers (not recorded):
+Slob-dpon Dbang-ye, Ston-tshul, Khro-phu-ba, Rin-po-che Za-lung-pa (Zhang Tshal-pa'i Gdams ngag and Rgod-tshang-pa's teachings)
+1319. Takes rab-byung vows from the abbot of Bsam-yas Bsam-grub-rin-chen.
+1326. Enrolls in Gsang-phu Ne'u-thog for formal studies with Mkhan-rabs 15 Slob-dpon Btsan-rgod-pa and Mkhan-rabs 16 Bla-brang Chos-dpal-rgyal-mtshan.
+1338. Comes to Snye-phu Shug-gseb and teaches Snying thig."
+45,bdr:P1583,bdo:personTeacherOf,bdr:P6861
+46,bdr:P1583,bdo:personName,bdr:NMED06EB68CC7F2B88
+47,bda:LGE1683F39A3E5756E,adm:logDate,2011-08-02T16:53:12.770000+00:00
+48,bda:LG98727DC2859B3588,adm:logWho,ns1:U00001
+49,bdr:P1583,bdo:personStudentOf,bdr:P1226
+50,bdr:P1583,bdo:hasMother,bdr:P1585
+51,bdr:P1583,bdo:personTeacherOf,bdr:P2JM193
+52,bdr:P1583,bdo:personStudentOf,bdr:P1584
+53,bdr:P1583,bdo:personTeacherOf,bdr:P2JM197
+54,bdr:P1583,bdo:personStudentOf,bdr:P403
+55,bda:P1583,adm:logEntry,bda:LG07470B2F724FDEA6
+56,bdr:NM6E5B539FC14B81F1,rdfs:label,rgyal sras thugs mchog rtsal/
+57,bdr:P1583,bdo:personGender,bdr:GenderMale
+58,bda:LG757F77D8BA18E640,adm:logWho,ns1:U00015
+59,bda:P1583,adm:facetIndex,28
+60,bda:LG663351B387DD33FA,adm:logDate,2012-08-23T16:40:14.673000+00:00
+61,bdr:NM9C8DEB6FF7CEC129,rdf:type,bdo:PersonPrimaryTitle
+62,bdr:P1583,bdo:personTeacherOf,bdr:P7091
+63,bdr:P1584,bdo:hasChild,bdr:P1583
+64,bdr:P1583,bdo:personStudentOf,bdr:P2JM184
+65,bda:LG07470B2F724FDEA6,adm:logWho,ns1:U00017
+66,bdr:NMED06EB68CC7F2B88,rdf:type,bdo:PersonPrimaryName
+67,bdr:P2JM194,bdo:personStudentOf,bdr:P1583
+68,bda:LG5A51821BAE247EF6,adm:logWho,ns1:U00021
+69,bda:P1583,bdo:isRoot,true
+70,bdr:P1583,bdo:personTeacherOf,bdr:P2JM200
+71,bda:LGAF7D0940EAE3607E,rdf:type,adm:UpdateData
+72,bdr:P2JM183,bdo:personTeacherOf,bdr:P1583
+73,bda:LG98727DC2859B3588,rdf:type,adm:InitialDataCreation
+74,bda:LG07470B2F724FDEA6,adm:logDate,2021-05-03T11:03:27.541000+00:00
+75,bdr:NM27A9E6B52AE2AFD6,rdf:type,bdo:PersonTitle
+76,bda:LG0648F5705843763B,adm:logDate,2011-07-01T04:41:07.905000+00:00
+77,bda:LG663351B387DD33FA,adm:logMessage,corrected title and name variant designations
+78,bdr:P8527,bdo:personStudentOf,bdr:P1583
+79,bdr:P1583,bdo:personEvent,bdr:EV81A442B676BCDB2A
+80,bdr:P2JM187,bdo:personTeacherOf,bdr:P1583
+81,bdr:P1583,bdo:personTeacherOf,bdr:P2JM196
+82,bdr:P1583,bdo:personName,bdr:NM27A9E6B52AE2AFD6
+83,bdr:P1583,bdo:personStudentOf,bdr:P1586
+84,bdr:P1583,bdo:personStudentOf,bdr:P2JM186
+85,bda:LG5A51821BAE247EF6,adm:logDate,2011-04-27T12:51:43.397000+00:00
+86,bdr:NMBC6B2B658373DD69,rdf:type,bdo:PersonTitle
+87,bdr:P403,bdo:personTeacherOf,bdr:P1583
+88,bdr:P2JM193,bdo:personStudentOf,bdr:P1583
+89,bdr:NMFB54273C9888828B,rdfs:label,klong chen pa/
+90,bda:P1583,adm:graphId,bdg:P1583
+91,bda:LG663351B387DD33FA,rdf:type,adm:UpdateData
+92,bdr:NMFB54273C9888828B,rdf:type,bdo:PersonCommonName
+93,bdr:P1583,bdo:personStudentOf,bdr:P2JM183
+94,bdr:P1583,bdo:personName,bdr:NME2F236C649A1C622
+95,bdr:P1583,bdo:personEvent,bdr:EVDD9AB2BD104D0A7D
+96,bda:LG663351B387DD33FA,adm:logWho,ns1:U00012
+97,bdr:NTF24F5C4DD8140821,bdo:noteText,"L. v.d. Kuijp has verified that the date of death of the subject was January, 1364. Also the unrecorded teacher Ston tshul may have been Btsun pa Ston tshul, Sa-skya scholar and author of at least two works on Tshad ma."
+98,bdr:P2JM198,bdo:personStudentOf,bdr:P1583
+99,bda:LG757F77D8BA18E640,rdf:type,adm:UpdateData
+100,bdr:P2JM190,bdo:personTeacherOf,bdr:P1583
+101,bda:LGAF7D0940EAE3607E,adm:logMessage,added records
+102,bdr:NTE1C8F77F6AFC308F,rdf:type,bdo:Note
+103,bdr:P1583,rdf:type,bdo:Person
+104,bdr:NT93D338F6A346B51D,bdo:contentLocationStatement,"v. 2, pp.104-112"
+105,bdr:NM27A9E6B52AE2AFD6,rdfs:label,klong chen rab 'byams/
+106,bdr:P1585,bdo:hasSon,bdr:P1583
+107,bdr:P1583,bdo:hasParent,bdr:P1585
+108,bda:LG0648F5705843763B,rdf:type,adm:UpdateData
+109,bda:LG757F77D8BA18E640,adm:logMessage,added records
+110,bda:P1583,adm:logEntry,bda:LG5A51821BAE247EF6
+111,bdr:P1583,bdo:personTeacherOf,bdr:P8528
+112,bdr:P1585,bdo:hasChild,bdr:P1583
+113,bdr:P1583,bdo:personTeacherOf,bdr:P2JM205
+114,bdr:P1583,bdo:personEvent,bdr:EV00B857229AAA1BF0
+115,bdr:P2JM192,bdo:personStudentOf,bdr:P1583
+116,bdr:NTABB307C08F280C09,rdf:type,bdo:Note
+117,bda:LG07470B2F724FDEA6,adm:logMessage,released
+118,bda:LG6B646336F5EE567D,adm:logMessage,added name rgyal sras thugs mchog rtsal
+119,bdr:P1583,bdo:personStudentOf,bdr:P2085
+120,bda:LG650F49A48542C160,adm:logWho,ns1:U00020
+121,bdr:P1583,bdo:personName,bdr:NMF942A81B0A73E4AA
+122,bdr:P1583,bdo:personStudentOf,bdr:P4312
+123,bdr:P1583,bdo:personTeacherOf,bdr:P2JM206
+124,bdr:P1583,bdo:note,bdr:NT93D338F6A346B51D
+125,bdr:P1583,bdo:personName,bdr:NMBC6B2B658373DD69
+126,bdr:NMED06EB68CC7F2B88,rdfs:label,dri med 'od zer/
+127,bdr:P1586,bdo:personTeacherOf,bdr:P1583
+128,bdr:P1583,bdo:personName,bdr:NM9C8DEB6FF7CEC129
+129,bdr:P2JM197,bdo:personStudentOf,bdr:P1583
+130,bdr:P1583,bdo:kinWith,bdr:P8528
+131,bdr:NM9C8DEB6FF7CEC129,rdfs:label,klong chen rab 'byams pa dri med 'od zer/
+132,bda:LG07470B2F724FDEA6,rdf:type,adm:UpdateData
+133,bdr:P1583,bdo:hasSon,bdr:P8528
+134,bdr:P1583,bdo:note,bdr:NTDAA95D67ECFAB1A7
+135,bda:LG6B646336F5EE567D,adm:logWho,ns1:U00016
+136,bdr:P1583,bdo:personStudentOf,bdr:P2JM190
+137,bdr:P1583,bdo:personTeacherOf,bdr:P2JM201
+138,bdr:P7091,bdo:personStudentOf,bdr:P1583
+139,bda:P1583,adm:logEntry,bda:LG98727DC2859B3588
+140,bda:P1583,adm:logEntry,bda:LGE1683F39A3E5756E
+141,bdr:NME2F236C649A1C622,rdf:type,bdo:PersonPrimaryName
+142,bda:P1583,adm:logEntry,bda:LG650F49A48542C160
+143,bdr:P5092,bdo:personStudentOf,bdr:P1583
+144,bdr:P4312,bdo:personTeacherOf,bdr:P1583
+145,bdr:P1583,bdo:note,bdr:NTF24F5C4DD8140821
+146,bda:P1583,rdf:type,adm:AdminData
+147,bdr:P2JM189,bdo:personTeacherOf,bdr:P1583
+148,bdr:P1583,bdo:kinWith,bdr:P1584
+149,bdr:EV81A442B676BCDB2A,bdo:eventWhere,bdr:G521
+150,bdr:P1583,bdo:personTeacherOf,bdr:P5092
+151,bdr:P1583,bdo:personTeacherOf,bdr:P2JM202
+152,bdr:P1584,bdo:personTeacherOf,bdr:P1583
+153,bdr:EVDD9AB2BD104D0A7D,bdo:onYear,1308-01-01
+154,bda:LG5A51821BAE247EF6,adm:logMessage,bcos
+155,bdr:P1583,skos:prefLabel,klong chen rab 'byams pa dri med 'od zer/
+156,bdr:P2JM199,bdo:personStudentOf,bdr:P1583
+157,bdr:EV00B857229AAA1BF0,rdf:type,bdo:PersonDeath
+158,bdr:P2JM204,bdo:personStudentOf,bdr:P1583
+159,bdr:P1583,bdo:personTeacherOf,bdr:P2JM207
+160,bdr:P4860,bdo:personTeacherOf,bdr:P1583
+161,bdr:P8528,bdo:personStudentOf,bdr:P1583
+162,bda:LGE1683F39A3E5756E,rdf:type,adm:UpdateData
+163,bda:P1583,adm:status,bda:StatusReleased
+164,bdr:P1583,bdo:personStudentOf,bdr:P2JM188
+165,bdr:NMF942A81B0A73E4AA,rdf:type,bdo:PersonPersonalName
+166,bdr:P1583,skos:prefLabel,隆钦热降巴·赤墨俄色
+167,bdr:P8784,bdo:personStudentOf,bdr:P1583
+168,bdr:P8528,bdo:hasParent,bdr:P1583
+169,bdr:P1584,bdo:hasSon,bdr:P1583
+170,bda:LG650F49A48542C160,adm:logMessage,edited note
+171,bdr:P1585,bdo:kinWith,bdr:P1583
+172,bdr:NMBC6B2B658373DD69,rdfs:label,bsam yas lung mang ba/
+173,bdr:P1583,bdo:personTeacherOf,bdr:P2JM198
+174,bdr:EV00B857229AAA1BF0,bdo:onYear,1364-01-01
+175,bdr:P1583,bdo:personStudentOf,bdr:P2JM191
+176,bdr:P6861,bdo:personStudentOf,bdr:P1583
+177,bdr:P1583,bdo:isRoot,true
+178,bda:P1583,adm:gitPath,fa/P1583.trig
+179,bdr:NT93D338F6A346B51D,rdf:type,bdo:Note
+180,bdr:P1583,bdo:personTeacherOf,bdr:P8784
+181,bda:LG0648F5705843763B,adm:logWho,ns1:U00020
+182,bdr:P2JM184,bdo:personTeacherOf,bdr:P1583
+183,bdr:NTDAA95D67ECFAB1A7,bdo:contentLocationStatement,p. 77
+184,bdr:P1583,bdo:note,bdr:NTABB307C08F280C09
+185,bdr:NTB25CDA7F05164BEA,bdo:noteSource,bdr:MW19822
+186,bdr:P1583,bdo:hasFather,bdr:P1584
+187,bdr:P2JM205,bdo:personStudentOf,bdr:P1583
+188,bda:LG6B646336F5EE567D,adm:logDate,2009-10-22T18:31:49.120000+00:00
+189,bda:LG6B646336F5EE567D,rdf:type,adm:UpdateData
+190,bda:P1583,adm:logEntry,bda:LG6B646336F5EE567D
+191,bdr:P1583,bdo:personTeacherOf,bdr:P2JM194
+192,bdr:NTF24F5C4DD8140821,rdf:type,bdo:Note
+193,bdr:NTABB307C08F280C09,bdo:noteSource,bdr:MW27401
+194,bdr:NTDAA95D67ECFAB1A7,rdf:type,bdo:Note
+195,bdr:P1583,bdo:personTeacherOf,bdr:P2JM203
+196,bdr:EV81A442B676BCDB2A,rdf:type,bdo:PersonOccupiesSeat
+197,bdr:P1583,bdo:personTeacherOf,bdr:P8527
+198,bdr:P5911,bdo:personStudentOf,bdr:P1583
+199,bdr:P2JM191,bdo:personTeacherOf,bdr:P1583
+200,bdr:NTABB307C08F280C09,bdo:contentLocationStatement,251
+201,bda:LGE1683F39A3E5756E,adm:logMessage,added name in chinese
+202,bdr:P1588,bdo:personTeacherOf,bdr:P1583
+203,bdr:P1583,bdo:kinWith,bdr:P1585
+204,bdr:NME2F236C649A1C622,rdfs:label,隆钦热降巴·赤墨俄色
+205,bdr:P1584,bdo:kinWith,bdr:P1583
+206,bdr:P1583,bdo:personTeacherOf,bdr:P2JM199
+207,bdr:P1583,bdo:note,bdr:NTE1C8F77F6AFC308F
+208,bdr:P2JM201,bdo:personStudentOf,bdr:P1583
+209,bdr:P1226,bdo:personTeacherOf,bdr:P1583
+210,bdr:NM6E5B539FC14B81F1,rdf:type,bdo:PersonSecretInitiatoryName
+211,bda:P1583,adm:adminAbout,bdr:P1583
+212,bdr:P1583,bdo:personTeacherOf,bdr:P2JM195
+213,bda:LG5A51821BAE247EF6,rdf:type,adm:UpdateData
+214,bdr:P1583,bdo:personStudentOf,bdr:P2JM185
+215,bdr:P1583,bdo:personStudentOf,bdr:P4860
+216,bda:LG650F49A48542C160,rdf:type,adm:UpdateData
+217,bdr:P1583,bdo:personStudentOf,bdr:P1587
+218,bdr:P1583,bdo:personStudentOf,bdr:P66
+219,bdr:P1583,bdo:personTeacherOf,bdr:P314
+220,bdr:NTDAA95D67ECFAB1A7,bdo:noteSource,bdr:MW19801
+221,bda:P1583,adm:metadataLegal,bda:LD_BDRC_CC0
+222,bdr:P1583,bdo:personStudentOf,bdr:P144
+223,bda:P1583,adm:gitRevision,940d33b105cf3d1b0edd92690e91f2bbccc984d7
+224,bda:LG650F49A48542C160,adm:logDate,2012-06-11T09:58:04.367000+00:00
+225,bdr:NTB25CDA7F05164BEA,bdo:contentLocationStatement,p. 6
+226,bdr:P1583,bdo:personStudentOf,bdr:P2JM189
+227,bdr:P2JM200,bdo:personStudentOf,bdr:P1583
+228,bdr:EVDD9AB2BD104D0A7D,rdf:type,bdo:PersonBirth
+229,bda:P1583,adm:gitRepo,bda:GR0006
+230,bdr:P2JM186,bdo:personTeacherOf,bdr:P1583
