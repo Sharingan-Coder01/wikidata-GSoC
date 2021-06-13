@@ -134,7 +134,7 @@ def run(url_link, id):
 
     for _, _, status in g.triples((BDA[id], ADM.status, None)):
         s = status.rsplit('/', 1)[-1]
-        if s == "StatusWithdrawn":
+        if s != "StatusReleased":
             return
 
     labels, aliases, num_aliases_bo, num_aliases_zh, num_aliases_en, gen, DD, BD = extractVal(g, BDR[id])
