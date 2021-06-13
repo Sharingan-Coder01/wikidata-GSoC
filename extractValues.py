@@ -123,14 +123,14 @@ def createCSV(labels, aliases, NBCOLSALIASES, ID, gend, dateDeath, dateBirth):
             else:
                 row.append("")
     
-    with open('extracted_values.csv', 'a') as fd:
+    with open('person_extr_data.csv', 'a') as fd:
         writenow = csv.writer(fd)
         writenow.writerow(row)
 
 
-def run(url_link, id):
+def run(file_path, id):
     g = rdflib.ConjunctiveGraph()
-    g.parse(url_link, format="turtle")
+    g.parse(file_path, format="trig")
 
     for _, _, status in g.triples((BDA[id], ADM.status, None)):
         s = status.rsplit('/', 1)[-1]
@@ -149,24 +149,34 @@ def run(url_link, id):
 
 
 def main():
-    l = os.listdir('persons/00')
-    li = [x.split('.')[0] for x in l]
+    dir = os.listdir('persons')
+    folder = 'persons/'
+    directories = []
+    for dir_name in dir:
+        if dir_name.find(".git") == -1:
+            directory = folder + dir_name
+            directories.append(directory)
 
-    link = 'http://purl.bdrc.io/graph/'
-
-    person_links = []
-    for i, f in enumerate(li):
-        url_link = link + f
-        person_links.append(url_link)
-
-    for url in person_links:
-        id = url.rsplit('/', 1)[-1]
-
-        if id.find("P0RK") == -1:
-            run(url, id)
-        
         else:
             continue
+
+    for d in directories:    
+        l = os.listdir(d)
+
+        person_links = []
+        for f in l:
+            file_p = d + "/" + f
+            person_links.append(file_p)
+
+        for file in person_links:
+            c = file.rsplit('/', 1)[-1]
+            id = c[:-5]
+
+            if id.find("P0RK") == -1:
+                run(file, id)
+            
+            else:
+                continue
 
 
 if __name__ == "__main__":
