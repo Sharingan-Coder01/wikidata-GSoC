@@ -44,9 +44,6 @@ def normalize(literal):
 def extractVal(g, entity):
     labels = {}
     aliases = {}
-    count_bo = 0
-    count_zh = 0
-    count_en = 0
     entity_gender = ""
     deathD = ""
     birthD = ""
@@ -64,12 +61,6 @@ def extractVal(g, entity):
                 aliases[lang] = []
             if lang not in labels or otherNameVal not in labels[lang]:              
                 aliases[lang].append(otherNameVal)
-                if(lang == "bo"):
-                    count_bo = count_bo + 1
-                if(lang == "zh"):
-                    count_zh = count_zh + 1
-                if(lang == "en"):
-                    count_en = count_en + 1
 
     for _, _, gender in g.triples((entity, BDO.personGender, None)):
         gen = gender.rsplit('/', 1)[-1]
@@ -86,10 +77,10 @@ def extractVal(g, entity):
                 for _, _, date in g.triples((perEvent, BDO.onYear, None)):
                     birthD = date[:4]         
 
-    return labels, aliases, count_bo, count_zh, count_en, entity_gender, deathD, birthD
+    return labels, aliases, entity_gender, deathD, birthD
 
 
-def createCSV(labels, aliases, NBCOLSALIASES, ID, gend, dateDeath, dateBirth):
+def createListVals(labels, aliases, NBCOLSALIASES, ID, gend, dateDeath, dateBirth, all_list):
     # labels at the beginning
     headers = []
     row = []
@@ -116,36 +107,42 @@ def createCSV(labels, aliases, NBCOLSALIASES, ID, gend, dateDeath, dateBirth):
             continue
         if nbcols < len(aliases[lang]):
             print("!!Error!! There should be at least %i columns for %s aliases" % (len(aliases[lang]), lang))
-            return
+            print(ID)
+            continue
         for i in range(nbcols):
             if i < len(aliases[lang]):
                 row.append(aliases[lang][i])
             else:
                 row.append("")
     
-    with open('person_extr_data.csv', 'a') as fd:
-        writenow = csv.writer(fd)
-        writenow.writerow(row)
+    all_list.append(row)
 
+
+def createCSV(all_list):
+    with open('every_person_data.csv', "a") as f:
+        writer = csv.writer(f)
+        for r in all_list:
+            writer.writerow(r)
 
 def run(file_path, id):
     g = rdflib.ConjunctiveGraph()
     g.parse(file_path, format="trig")
-
+    entity_list = []
     for _, _, status in g.triples((BDA[id], ADM.status, None)):
         s = status.rsplit('/', 1)[-1]
         if s != "StatusReleased":
             return
 
-    labels, aliases, num_aliases_bo, num_aliases_zh, num_aliases_en, gen, DD, BD = extractVal(g, BDR[id])
+    labels, aliases, gen, DD, BD = extractVal(g, BDR[id])
 
     NBCOLSALIASES = {
-        "bo": num_aliases_bo,
-        "zh-hans": num_aliases_zh,
-        "en": num_aliases_en
+        "bo": 17,
+        "zh-hans": 2,
+        "en": 4
     }
 
-    createCSV(labels, aliases, NBCOLSALIASES, id, gen, DD, BD)
+    createListVals(labels, aliases, NBCOLSALIASES, id, gen, DD, BD, entity_list)
+    createCSV(entity_list)
 
 
 def main():
