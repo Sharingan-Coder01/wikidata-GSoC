@@ -14,7 +14,7 @@ def capture(myList):
     driver.quit() 
 
 def main():
-    df = pd.read_csv('Uploaded50.csv')
+    df = pd.read_csv('Uploaded49.csv')
     listn = df.label_bo
     capture(listn)
 
