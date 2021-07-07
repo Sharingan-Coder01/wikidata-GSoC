@@ -74,72 +74,55 @@ def extractValues(g, id, f):
     foundation = ""
     converted = ""
     str1 = f
-        
+
     if(str1 == "bdr:PT0037"):
         PlaceType = "monastery"
-        Plabels = get_prefLabels(g, id)
-        Paliases = get_altLabels(g, id)
         
-        # Place Latitude
-        for _, _, placeLat in g.triples((BDR[id], BDO.placeLat, None)):
-            lat = placeLat
-        
-        # Place Longitude
-        for _, _, placeLong in g.triples((BDR[id], BDO.placeLong, None)):
-            long = placeLong
-
-        # Date of Foundation
-        for _, _, eveId in g.triples((BDR[id], BDO.placeEvent, None)):
-            for _, _, event in g.triples((eveId, RDF.type, None)):
-                _, _, check = NSM.compute_qname_strict(event)
-                if(check == "PlaceFounded"):
-                    for _, _, date in g.triples((eveId, BDO.onYear, None)):
-                        foundOn = date[:4]
-                        foundation = foundOn
-
-        # Date of Converion      
-        for _, _, eveId in g.triples((BDR[id], BDO.placeEvent, None)):
-            for _, _, event in g.triples((eveId, RDF.type, None)):
-                _, _, check = NSM.compute_qname_strict(event)
-                if(check == "PlaceConverted"):
-                    for _, _, date2 in g.triples((eveId, BDO.onYear, None)):
-                        convertedOn = date2[:4]
-                        converted = convertedOn
-        
-        return PlaceType, Plabels, Paliases, lat, long, foundation, converted
-    
     elif(str1 == "bdr:PT0059"):
         PlaceType = "printery"
-        Plabels = get_prefLabels(g, id)
-        Paliases = get_altLabels(g, id)
-        
-        # Place Latitude
-        for _, _, placeLat in g.triples((BDR[id], BDO.placeLat, None)):
-            lat = placeLat
-        
-        # Place Longitude
-        for _, _, placeLong in g.triples((BDR[id], BDO.placeLong, None)):
-            long = placeLong
 
-        # Date of Foundation
-        for _, _, eveId in g.triples((BDR[id], BDO.placeEvent, None)):
-            for _, _, event in g.triples((eveId, RDF.type, None)):
-                _, _, check = NSM.compute_qname_strict(event)
-                if(check == "PlaceFounded"):
-                    for _, _, date in g.triples((eveId, BDO.onYear, None)):
-                        foundOn = date[:4]
-                        foundation = foundOn
+    elif(str1 == "bdr:PT0084"):
+        PlaceType = "village"
+    
+    elif(str1 == "bdr:PT0050"):
+        PlaceType = "nunnery"
 
-        # Date of Converion        
-        for _, _, eveId in g.triples((BDR[id], BDO.placeEvent, None)):
-            for _, _, event in g.triples((eveId, RDF.type, None)):
-                _, _, check = NSM.compute_qname_strict(event)
-                if(check == "PlaceConverted"):
-                    for _, _, date2 in g.triples((eveId, BDO.onYear, None)):
-                        convertedOn = date2[:4]
-                        converted = convertedOn
-        
-        return PlaceType, Plabels, Paliases, lat, long, foundation, converted
+    elif(str1 == "bdr:PT0028"):
+        PlaceType = "lake"
+
+    elif(str1 == "bdr:PT0008"):
+        PlaceType = "city"
+
+    Plabels = get_prefLabels(g, id)
+    Paliases = get_altLabels(g, id)
+    
+    # Place Latitude
+    for _, _, placeLat in g.triples((BDR[id], BDO.placeLat, None)):
+        lat = placeLat
+    
+    # Place Longitude
+    for _, _, placeLong in g.triples((BDR[id], BDO.placeLong, None)):
+        long = placeLong
+    
+    # Date of Foundation
+    for _, _, eveId in g.triples((BDR[id], BDO.placeEvent, None)):
+        for _, _, event in g.triples((eveId, RDF.type, None)):
+            _, _, check = NSM.compute_qname_strict(event)
+            if(check == "PlaceFounded"):
+                for _, _, date in g.triples((eveId, BDO.onYear, None)):
+                    foundOn = date[:4]
+                    foundation = foundOn
+
+    # Date of Converion    
+    for _, _, eveId in g.triples((BDR[id], BDO.placeEvent, None)):
+        for _, _, event in g.triples((eveId, RDF.type, None)):
+            _, _, check = NSM.compute_qname_strict(event)
+            if(check == "PlaceConverted"):
+                for _, _, date2 in g.triples((eveId, BDO.onYear, None)):
+                    convertedOn = date2[:4]
+                    converted = convertedOn
+    
+    return PlaceType, Plabels, Paliases, lat, long, foundation, converted
 
 
 # Function to store all data
@@ -178,7 +161,7 @@ def createList(LANGLABELS, BDRCid, PlaceType, Plabels, Paliases, lati, longi, fo
 
 # Function to create CSV for data
 def createCSV(all_list):
-    with open('All_Places_Draft3.csv', "a") as f:
+    with open('All_Places_Draft.csv', "a") as f:
         writer = csv.writer(f)
         for r in all_list:
             writer.writerow(r)
@@ -206,7 +189,8 @@ def run(file_path, id, entity_list):
         nsshort, _, lname = NSM.compute_qname_strict(placeID)
         filter = nsshort + ':' + lname
 
-    if filter == "bdr:PT0037" or filter == "bdr:PT0059":
+    type_place_Do = ["bdr:PT0037", "bdr:PT0059", "bdr:PT0084" , "bdr:PT0050" , "bdr:PT0028" , "bdr:PT0008"]
+    if filter in type_place_Do:
         Ptype, labels, aliases, latitude, longitude, foundationOnD, convertedOnD = extractValues(g, id, filter)    
     else:
         return
