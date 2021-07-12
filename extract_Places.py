@@ -34,13 +34,14 @@ if rdflib.__version__ == '4.2.2':
     x = rdflib.term._toPythonMapping.pop(rdflib.XSD['gYear'])
 
 converter = pyewts.pyewts()
+
+
 def normalize(literal):
     if literal.language == "bo-x-ewts":
         return [converter.toUnicode(literal.value), "bo"]
     return [literal.value, literal.language]
 
-
-# Function to extract label names
+# Function to get labels
 def get_prefLabels(g, id):
     pplabels = {}
     for _, _, prefL in g.triples((BDR[id], SKOS.prefLabel, None)):
@@ -51,8 +52,7 @@ def get_prefLabels(g, id):
     
     return pplabels
 
-
-# Function to extract AltLabel Names
+# function to get alternate labels
 def get_altLabels(g, id):
     ppalias = {}
     for _, _, altL in g.triples((BDR[id], SKOS.altLabel, None)):
@@ -63,8 +63,7 @@ def get_altLabels(g, id):
     
     return ppalias
 
-
-# Function to extract all data
+# Function to extract values
 def extractValues(g, id, f):
     PlaceType = ""
     Plabels = {}
@@ -73,6 +72,7 @@ def extractValues(g, id, f):
     long = ""
     foundation = ""
     converted = ""
+    tradStr = ""
     str1 = f
 
     if(str1 == "bdr:PT0037"):
@@ -92,6 +92,12 @@ def extractValues(g, id, f):
 
     elif(str1 == "bdr:PT0008"):
         PlaceType = "city"
+
+    elif(str1 == "bdr:PT0020"):
+        PlaceType = "hamlet"
+    
+    elif(str1 == "bdr:PT0074"):
+        PlaceType = "temple"
 
     Plabels = get_prefLabels(g, id)
     Paliases = get_altLabels(g, id)
@@ -121,17 +127,22 @@ def extractValues(g, id, f):
                 for _, _, date2 in g.triples((eveId, BDO.onYear, None)):
                     convertedOn = date2[:4]
                     converted = convertedOn
-    
-    return PlaceType, Plabels, Paliases, lat, long, foundation, converted
 
+    # Associated Tradition
+    for _, _, peveId in g.triples((BDR[id], BDO.placeEvent, None)):
+        for _, _, extTrad in g.triples((peveId, BDO.associatedTradition, None)):
+            _, _, tradName = NSM.compute_qname_strict(extTrad)
+            tradStr = tradName[9:]
+
+
+    return PlaceType, Plabels, Paliases, lat, long, foundation, converted, tradStr
 
 # Function to store all data
-def createList(LANGLABELS, BDRCid, PlaceType, Plabels, Paliases, lati, longi, foundationO, convertedO):
+def createList(LANGLABELS, BDRCid, PlaceType, Plabels, Paliases, lati, longi, foundationO, convertedO, AsTradition):
     row = []
     row.append(BDRCid)
     row.append(PlaceType)
 
-    # Storing Labels
     for lang in LANGLABELS.keys():
         if lang in Plabels and len(Plabels[lang]):
             if Plabels[lang][0] == "？" or Plabels[lang][0] == "？？":
@@ -141,7 +152,6 @@ def createList(LANGLABELS, BDRCid, PlaceType, Plabels, Paliases, lati, longi, fo
         else:
             row.append("")
     
-    # Storing AltLabels
     for lang in LANGLABELS.keys():
         if lang in Paliases and len(Paliases[lang]):
             if Paliases[lang][0] == "？" or Paliases[lang][0] == "？？":
@@ -153,15 +163,15 @@ def createList(LANGLABELS, BDRCid, PlaceType, Plabels, Paliases, lati, longi, fo
 
     row.append(lati)
     row.append(longi)
+    row.append(AsTradition)
     row.append(foundationO)
     row.append(convertedO)
 
     return row
 
-
-# Function to create CSV for data
+# Function to create CSV 
 def createCSV(all_list):
-    with open('All_Places_Draft.csv', "a") as f:
+    with open('All_Places_Final.csv', "a") as f:
         writer = csv.writer(f)
         for r in all_list:
             writer.writerow(r)
@@ -175,6 +185,7 @@ def run(file_path, id, entity_list):
     longitude = ""
     foundationOnD = ""
     convertedOnD = ""
+    AsscTrad = ""
     filter = ""
 
     g = rdflib.ConjunctiveGraph()
@@ -189,9 +200,9 @@ def run(file_path, id, entity_list):
         nsshort, _, lname = NSM.compute_qname_strict(placeID)
         filter = nsshort + ':' + lname
 
-    type_place_Do = ["bdr:PT0037", "bdr:PT0059", "bdr:PT0084" , "bdr:PT0050" , "bdr:PT0028" , "bdr:PT0008"]
+    type_place_Do = ["bdr:PT0037", "bdr:PT0059", "bdr:PT0084" , "bdr:PT0050" , "bdr:PT0028" , "bdr:PT0008", "bdr:PT0020", "bdr:PT0074"]
     if filter in type_place_Do:
-        Ptype, labels, aliases, latitude, longitude, foundationOnD, convertedOnD = extractValues(g, id, filter)    
+        Ptype, labels, aliases, latitude, longitude, foundationOnD, convertedOnD, AsscTrad = extractValues(g, id, filter)    
     else:
         return
 
@@ -203,7 +214,7 @@ def run(file_path, id, entity_list):
         "mn-x-trans" : 1
     }
 
-    plist = createList(LANGLABELS, id, Ptype, labels, aliases, latitude, longitude, foundationOnD, convertedOnD)
+    plist = createList(LANGLABELS, id, Ptype, labels, aliases, latitude, longitude, foundationOnD, convertedOnD, AsscTrad)
     entity_list.append(plist)
 
 
