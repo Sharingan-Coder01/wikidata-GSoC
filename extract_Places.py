@@ -41,7 +41,7 @@ def normalize(literal):
         return [converter.toUnicode(literal.value), "bo"]
     return [literal.value, literal.language]
 
-# Function to get labels
+# function to get labels
 def get_prefLabels(g, id):
     pplabels = {}
     for _, _, prefL in g.triples((BDR[id], SKOS.prefLabel, None)):
@@ -102,8 +102,6 @@ def extractValues(g, id, f):
     elif(str1 == "bdr:PT0011"):
         PlaceType = "county"
     
-    elif(str1 == "bdr:PT0014"):
-        PlaceType = "district"
 
     Plabels = get_prefLabels(g, id)
     Paliases = get_altLabels(g, id)
@@ -177,7 +175,7 @@ def createList(LANGLABELS, BDRCid, PlaceType, Plabels, Paliases, lati, longi, fo
 
 # Function to create CSV 
 def createCSV(all_list):
-    with open('All_Places_Final.csv', "a") as f:
+    with open('Places_FinalExt.csv', "a") as f:
         writer = csv.writer(f)
         for r in all_list:
             writer.writerow(r)
@@ -206,7 +204,7 @@ def run(file_path, id, entity_list):
         nsshort, _, lname = NSM.compute_qname_strict(placeID)
         filter = nsshort + ':' + lname
 
-    type_place_Do = ["bdr:PT0037", "bdr:PT0059", "bdr:PT0084" , "bdr:PT0050" , "bdr:PT0028" , "bdr:PT0008", "bdr:PT0020", "bdr:PT0074", "bdr:PT0014", "bdr:PT0011"]
+    type_place_Do = ["bdr:PT0037", "bdr:PT0059", "bdr:PT0084" , "bdr:PT0050" , "bdr:PT0028" , "bdr:PT0008", "bdr:PT0020", "bdr:PT0074", "bdr:PT0011"]
     if filter in type_place_Do:
         Ptype, labels, aliases, latitude, longitude, foundationOnD, convertedOnD, AsscTrad = extractValues(g, id, filter)    
     else:
