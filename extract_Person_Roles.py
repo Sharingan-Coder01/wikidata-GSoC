@@ -41,19 +41,19 @@ g = rdflib.ConjunctiveGraph()
 file_path = 'CachePersonRoles.trig'
 g.parse(file_path, format = "trig")
 
-
+# Extract roles for persons
 def extractRole(mylist):
     for bdrcId, _, _ in g.triples((None, TMP.hasRole, None)):
-        nlist = []
+        nlist = [] # Stores roles in list 
         _, _, lname1 = NSM.compute_qname_strict(bdrcId)
         nlist.append(lname1)
         for _, _, RoleId in g.triples((bdrcId, TMP.hasRole, None)):
             _, _, lname2 = NSM.compute_qname_strict(RoleId)
             nlist.append(lname2)
         
-        mylist.append(nlist)
+        mylist.append(nlist) # Appends list for one person to master list
 
-
+# Function to create CSV with master list
 def createCSV(mylist):
 	with open('Roles_read.csv', "w") as f:
 		writer = csv.writer(f)

@@ -40,20 +40,22 @@ def normalize(literal):
         return [converter.toUnicode(literal.value), "bo"]
     return [literal.value, literal.language]
 
-
-def extractVal(g, entity):
+# Function to extract all values for person data 
+def extractVal(g, entity): 
     labels = {}
     aliases = {}
     entity_gender = ""
     deathD = ""
     birthD = ""
 
+    # Gets labels for person
     for _, _, prefL in g.triples((entity, SKOS.prefLabel, None)):
         prefLabelVal, lang = normalize(prefL)
         if lang not in labels:
             labels[lang] = []
         labels[lang].append(prefLabelVal)
 
+    # Gets alias for persons
     for _, _, nameR in g.triples((entity, BDO.personName, None)):
         for _, _, otherName in g.triples((nameR, RDFS.label, None)):
             otherNameVal, lang = normalize(otherName)
@@ -62,10 +64,12 @@ def extractVal(g, entity):
             if lang not in labels or otherNameVal not in labels[lang]:              
                 aliases[lang].append(otherNameVal)
 
+    # Extracts gender for persons
     for _, _, gender in g.triples((entity, BDO.personGender, None)):
         gen = gender.rsplit('/', 1)[-1]
         entity_gender = gen[6:]          
 
+    # Gets date of birth and death 
     for _,_, perEvent in g.triples((entity, BDO.personEvent, None)):
         for _, _, perE in g.triples((perEvent, RDF.type, None)):
             check_date = perE.rsplit('/', 1)[-1]
@@ -79,7 +83,7 @@ def extractVal(g, entity):
 
     return labels, aliases, entity_gender, deathD, birthD
 
-
+# Function to store extracted data in list 
 def createListVals(labels, aliases, NBCOLSALIASES, ID, gend, dateDeath, dateBirth, all_list):
     # labels at the beginning
     headers = []
@@ -117,13 +121,14 @@ def createListVals(labels, aliases, NBCOLSALIASES, ID, gend, dateDeath, dateBirt
     
     all_list.append(row)
 
-
+# Function to create CSV
 def createCSV(all_list):
     with open('every_person_data.csv', "a") as f:
         writer = csv.writer(f)
         for r in all_list:
             writer.writerow(r)
 
+# Wrapper function for all function call
 def run(file_path, id):
     g = rdflib.ConjunctiveGraph()
     g.parse(file_path, format="trig")
@@ -135,6 +140,7 @@ def run(file_path, id):
 
     labels, aliases, gen, DD, BD = extractVal(g, BDR[id])
 
+    # Dictionarty for languages 
     NBCOLSALIASES = {
         "bo": 17,
         "zh-hans": 2,
@@ -149,7 +155,8 @@ def main():
     dir = os.listdir('persons')
     folder = 'persons/'
     directories = []
-    for dir_name in dir:
+    # Function to get all directories in person data
+    for dir_name in dir: 
         if dir_name.find(".git") == -1:
             directory = folder + dir_name
             directories.append(directory)
@@ -161,7 +168,7 @@ def main():
         l = os.listdir(d)
 
         person_links = []
-        for f in l:
+        for f in l: # Function to get file path for all files in a directory
             file_p = d + "/" + f
             person_links.append(file_p)
 

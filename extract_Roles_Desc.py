@@ -5,6 +5,7 @@ import csv
 import pyewts
 import sys
 
+# ttl file for roles description 
 TRIGSTR = """
 @prefix Creator: <http://purl.bdrc.io/ontology/roles/Creator/> .
 @prefix adm: <http://purl.bdrc.io/ontology/admin/> .
@@ -235,22 +236,23 @@ def normalize(literal):
         return [converter.toUnicode(literal.value), "bo"]
     return [literal.value, literal.language]
 
-
+# Function to store all the roles 
 def getroles(mylist):
     for rID, _, _ in g.triples((None, SKOS.prefLabel, None)):
         nlist = []
         _, _, lname1 = NSM.compute_qname_strict(rID)
         nlist.append(lname1)
-        for _, _, prefL in g.triples((rID, SKOS.prefLabel, None)):
+		#Gets label names for roles 
+        for _, _, prefL in g.triples((rID, SKOS.prefLabel, None)):  
             prefLabelVal, lang = normalize(prefL)
-            if lang == "en":
+            if lang == "en":  # Filters only english names for roles 
                 nlist.append(prefLabelVal)
             else:
                 continue
         
-        mylist.append(nlist)
+        mylist.append(nlist) # Appends to master list
     
-
+# Function to create CSV using master list
 def createCSV(mylist):
 	with open('roles_labels.csv', "w") as f:
 		writer = csv.writer(f)

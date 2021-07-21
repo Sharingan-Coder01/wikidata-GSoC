@@ -41,9 +41,9 @@ def normalize(literal):
         return [converter.toUnicode(literal.value), "bo"]
     return [literal.value, literal.language]
 
-# function to get labels
+# Function to get labels
 def get_prefLabels(g, id):
-    pplabels = {}
+    pplabels = {}  #Extractes name labels and stores in the dictionary against the language
     for _, _, prefL in g.triples((BDR[id], SKOS.prefLabel, None)):
         prefLabelVal, lang = normalize(prefL)
         if lang not in pplabels:
@@ -52,9 +52,9 @@ def get_prefLabels(g, id):
     
     return pplabels
 
-# function to get alternate labels
+# Function to get alternate labels
 def get_altLabels(g, id):
-    ppalias = {}
+    ppalias = {}   #Extractes alias names and stores in the dictionary against the language 
     for _, _, altL in g.triples((BDR[id], SKOS.altLabel, None)):
         altLabelVal, lang = normalize(altL)
         if lang not in ppalias:
@@ -75,6 +75,7 @@ def extractValues(g, id, f):
     tradStr = ""
     str1 = f
 
+    # Assigns type of the place 
     if(str1 == "bdr:PT0037"):
         PlaceType = "monastery"
         
@@ -103,18 +104,18 @@ def extractValues(g, id, f):
         PlaceType = "county"
     
 
-    Plabels = get_prefLabels(g, id)
-    Paliases = get_altLabels(g, id)
+    Plabels = get_prefLabels(g, id) # Function call to get name labels 
+    Paliases = get_altLabels(g, id) # Function call to get alias name 
     
-    # Place Latitude
+    # Stores Place Latitude
     for _, _, placeLat in g.triples((BDR[id], BDO.placeLat, None)):
         lat = placeLat
     
-    # Place Longitude
+    # Stores Place Longitude
     for _, _, placeLong in g.triples((BDR[id], BDO.placeLong, None)):
         long = placeLong
     
-    # Date of Foundation
+    # Stores Date of Foundation
     for _, _, eveId in g.triples((BDR[id], BDO.placeEvent, None)):
         for _, _, event in g.triples((eveId, RDF.type, None)):
             _, _, check = NSM.compute_qname_strict(event)
@@ -123,7 +124,7 @@ def extractValues(g, id, f):
                     foundOn = date[:4]
                     foundation = foundOn
 
-    # Date of Converion    
+    # Stores Date of Converion    
     for _, _, eveId in g.triples((BDR[id], BDO.placeEvent, None)):
         for _, _, event in g.triples((eveId, RDF.type, None)):
             _, _, check = NSM.compute_qname_strict(event)
@@ -132,7 +133,7 @@ def extractValues(g, id, f):
                     convertedOn = date2[:4]
                     converted = convertedOn
 
-    # Associated Tradition
+    # Stores Associated Tradition
     for _, _, peveId in g.triples((BDR[id], BDO.placeEvent, None)):
         for _, _, extTrad in g.triples((peveId, BDO.associatedTradition, None)):
             _, _, tradName = NSM.compute_qname_strict(extTrad)
@@ -141,7 +142,7 @@ def extractValues(g, id, f):
 
     return PlaceType, Plabels, Paliases, lat, long, foundation, converted, tradStr
 
-# Function to store all data
+# Function to create list from all extracted data
 def createList(LANGLABELS, BDRCid, PlaceType, Plabels, Paliases, lati, longi, foundationO, convertedO, AsTradition):
     row = []
     row.append(BDRCid)
@@ -204,12 +205,14 @@ def run(file_path, id, entity_list):
         nsshort, _, lname = NSM.compute_qname_strict(placeID)
         filter = nsshort + ':' + lname
 
+    # Filter type of places
     type_place_Do = ["bdr:PT0037", "bdr:PT0059", "bdr:PT0084" , "bdr:PT0050" , "bdr:PT0028" , "bdr:PT0008", "bdr:PT0020", "bdr:PT0074", "bdr:PT0011"]
     if filter in type_place_Do:
         Ptype, labels, aliases, latitude, longitude, foundationOnD, convertedOnD, AsscTrad = extractValues(g, id, filter)    
     else:
         return
 
+    # Dictionary stores all languages for name labels and alias
     LANGLABELS = {
         "bo": 1,
         "zh-hans": 1,
@@ -227,7 +230,7 @@ def main():
     dir = os.listdir('places')
     folder = 'places/'
     directories = []
-    for dir_name in dir:
+    for dir_name in dir:   # loop to get all directories from places data
         if dir_name.find(".git") == -1:
             directory = folder + dir_name
             directories.append(directory)
@@ -239,11 +242,11 @@ def main():
     for d in directories:    
         l = os.listdir(d)
         person_links = []
-        for f in l:
+        for f in l:  # Loop to get all file path from each directory.
             file_p = d + "/" + f
             person_links.append(file_p)
-
-        for file in person_links:
+            
+        for file in person_links:  
             c = file.rsplit('/', 1)[-1]
             id = c[:-5]
             run(file, id, entity_list)

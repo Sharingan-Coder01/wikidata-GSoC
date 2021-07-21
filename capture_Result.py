@@ -8,14 +8,14 @@ def capture(myList):
     ext = ".png"
 
     for i, f in enumerate(myList):
-        driver.get("http://www.google.com/search?q=" + f)
-        driver.get_screenshot_as_file(fileName + str(i) + ext)
+        driver.get("http://www.google.com/search?q=" + f) # Search url with file name 
+        driver.get_screenshot_as_file(fileName + str(i) + ext) # Capture screenshot and save
 
     driver.quit() 
 
 def main():
     df = pd.read_csv('Uploaded49.csv')
-    listn = df.label_bo
+    listn = df.label_bo # Name column
     capture(listn)
 
 if __name__ == "__main__":

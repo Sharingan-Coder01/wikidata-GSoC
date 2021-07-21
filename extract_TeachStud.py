@@ -35,13 +35,14 @@ if rdflib.__version__ == '4.2.2':
 
 converter = pyewts.pyewts()
 
-
+# Function to extract values for teachers and students
 def extract(g, id):
     values = {}
     typeD = ""
     
     # ID's Teachers
-    for _, _, teID in g.triples((BDR[id], BDO.personStudentOf, None)):
+    for _, _, teID in g.triples((BDR[id], BDO.personStudentOf, None)): 
+        # Gets teachers of a person
         typeD = "teachers"
         _, _, teachID = NSM.compute_qname_strict(teID)
         if typeD not in values:
@@ -50,6 +51,7 @@ def extract(g, id):
     
     # ID's Students
     for _, _, stID in g.triples((BDR[id], BDO.personTeacherOf, None)):
+        # Gets students of a person
         typeD = "students"
         _, _, studID = NSM.compute_qname_strict(stID)
         if typeD not in values:
@@ -58,7 +60,7 @@ def extract(g, id):
     
     return values
 
-
+# Creates list with the extracted data
 def createList(personID, vals, COUNTPROP):
     row = []
     row.append(personID)
@@ -78,7 +80,7 @@ def createList(personID, vals, COUNTPROP):
     
     return row
 
-
+# Wrapper function for all function call
 def run(file_path, id, entity_list):
     ext_val = {}
 
@@ -87,6 +89,7 @@ def run(file_path, id, entity_list):
 
     ext_val = extract(g, id)
 
+    # Dictionary for number of teachers and students 
     COUNTPROP = {
         "teachers" : 40, 
         "students" : 80
@@ -96,7 +99,7 @@ def run(file_path, id, entity_list):
     entity_list.append(nlist)
 
 
-# Function to create CSV 
+# Function to create CSV using master list
 def createCSV(all_list):
     with open('ExtractProp1.csv', "a") as f:
         writer = csv.writer(f)
