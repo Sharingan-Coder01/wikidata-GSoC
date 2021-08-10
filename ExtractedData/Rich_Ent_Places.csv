@@ -1,0 +1,50 @@
+BDRC_ID,PlaceType,label_bo,label_zh-hans,label_en,label_zh-pinin,label_mn-x-trans,alias_bo,alias_zh-hans,alias_en,alias_zh-pinin,alias_mn-x-trans,Latitude,Longitude,AscTrad,FoundedOn,ConvertedOn
+G1KR1642,monastery,བསམ་གཏན་གླིང་དགོན།,桑丹林寺,Samtenling,,,སྐྱིད་རོང་བསམ་གཏན་གླིང་དགོན།,吉隆县桑丹林寺,Jadur,sangdanlin si,,28.41667,85.36667,Kagyu,1550,1650
+G3611,monastery,སྟག་ལུང་དགོན།,"达隆寺, 南达隆寺",Taklung Tarling Chode,,,ལྷོ་སྟག་ལུང་།,南达隆寺,,nan dalong si,,28.81215,90.44607,Sakya,700,1350
+G1837,monastery,གོང་བ་གྲྭ་ཚང་།,贡巴寺,Gongwa Dratsang,,,ཐོས་བསམ་དར་རྒྱས་གླིང་།,工巴寺/国巴寺,Gongwa Dratsang Tosam Dargyeling,gongba si,,36.05,101.47665,Geluk,1446,
+G161,monastery,བྱ་ཁྱུང་དགོན་པ།,夏琼寺,Jakhyung Monastery,,,ཨ་མདོ་བྱ་ཁྱུང་དགོན།,夏群寺/ 夏冲寺/ 沙冲寺,,xiaqun si/xiachong si/shachong si,,36.14439,101.88,"Kadampa, Geluk",1349,1599
+G163,monastery,རོང་བོ་དགོན་ཆེན།,隆务寺,Rongwo Monastery,,,རོང་པོ་དགོན་ཆེན་ཐོས་བསམ་རྣམ་རྒྱལ་གླིང་།,隆务大乐法轮洲,,longwu si,,35.51,102.01,"Sakya, Geluk",1301,1630
+G1KR2454,monastery,རྔ་བ་སྒར།,阿哇寺,Ngagar Jangchub Ling,,,རྔ་སྒར།,昂哇寺,,angwa si,,35.88,101.97678,"Sakya, Geluk",1350,1600
+G1KR1936,monastery,ཚ་རྡོར་དགོན།,岔道尔寺,Tsador Monastery ,,,ཚ་རྡོར་དགོན་བཀྲ་ཤིས་བྱམས་པ་རྣམ་རྒྱལ་གླིང་།,扎西贤巴南杰林,,zhaxi xianba nanjielin,,34.70963,103.79801,"Sakya, Geluk",1260,1750
+G2CN11149,monastery,སྨན་རིའི་གླིང་།,梅日寺,Menri (Dolanji),,,དཔལ་གཤེན་བསྟན་སྨན་རིའི་གླིང་།,印度梅日寺,Menri Monastery,yindu meiri si,,30.845815,77.149371,Bon,1969,
+G294,monastery,བཙན་པོ་དགོན།,赞布寺,Tsenpo Gon,,,སྒོ་མང་དགོན།,郭莽寺,Serkhok Monasetery,saikehe si,,37.03,101.81,Geluk,1650,
+G1KR1621,monastery,རྐྱང་བུ་དགོན།,江浦寺,Kyangpu,,,རྐྱང་ཕུ་དགོན།,萨玛达寺,,jiangpu si,,28.41667,89.58334,Rime,650,1246
+G201,monastery,ཇོ་ནང་དགོན་པ།,觉囊寺,Jonang Monastery,,,ཇོ་ནང་རྒྱལ་བའི་རི་ཁྲོད།,觉朗通卓钦摩大佛塔,Jomonang Gon,juelang si,,29.35,88,Jonang,1230,
+G471,monastery,གཏེར་ལུང་དགོན།,沙沟寺,Terlung Yiga Chodzin Ling,,,གཏེར་ལུང་ཡིད་དགའ་ཆོས་འཛིན་གླིང་།,堆隆寺,,shagou si,,35.2106,102.83985,"Drigung Kagyu, Geluk",1222,1650
+G2LS540,monastery,རྩ་མདའ་དུང་དཀར་དགོན།,东嘎寺,Dungkar,,,དུང་དཀར་བཀྲ་ཤིས་ཆོས་གླིང་དགོན།,札达东嘎寺,,dongga si,,31.63,79.78,Kadam,1350,1450
+G4681,monastery,བིས་མདོ་དགོན་ཆེན།,文都寺,Bido Gonchen,,,བིས་མདོ་དགོན་ཆེན་བཀྲ་ཤིས་ཐོས་བསམ་ཆོས་འཁོར་གླིང་།,边垛寺,,wendu si,,35.72813,102.34092,Geluk,1200,1600
+G2362,monastery,གསང་སྔགས་མཁར།,桑昂寺,Dechen Sangngak Khar,,,བདེ་ཆེན་གསང་སྔགས་མཁར།,德庆桑昂寺,,deqing sangang si,,29.67119,91.35907,Geluk,1250,1450
+G1709,monastery,སེར་དྲིས་དགོན།,赛支寺,Serdi Gonden Tashi Choling,,,སེར་དྲིས་དགོན་དགོན་ལྡན་བཀྲ་ཤིས་ཆོས་གླིང་།,赛智寺,,saizhi si,,36.08823,102.54711,Nyingma,1252,1677
+G247,monastery,ངམ་རིང་ཆོས་སྡེ།,昂仁曲德寺,Ngamring Chode ,,,ངམ་རིངས་ཆོས་སྡེ།,曲德寺,,angren qude si,,29.3,87.23333,"Sakya, Geluk",1225,1650
+G1936,monastery,གསེར་ལག་དགོན།,赛力亥寺,Serlak Gon,,,གསེར་ལག་དགོན་དགའ་ལྡན་ཕུན་ཚོགས་བསྟན་རྒྱས་གླིང་།,色勒寺,Serlak Gon Ganden Puntsok Tengye Ling,saile si,,35.11624,100.42243,Geluk,1695,
+G1KR795,monastery,སྔོ་ཕུ་དགོན།,红坡寺,Hongphu Monastery,,,སྔོ་ཕུ་དགའ་ལྡན་ཡངས་པ་ཅན།,红坡噶丹羊八景林,,Hongpogadanyangbajing lin,,28.28333,98.9,Geluk,1514,1676
+G1KR817,monastery,གནས་ཆུང་དགོན་པ།,乃穷寺,Nechung,,,གནས་ཆུང་རྡོ་རྗེ་སྒྲ་དབྱངས་གླིང་།,乃穷扎央林,,naiqiong si,,29.67113,91.05548,"Nyingma, Geluk",1681,1500
+G1KR2448,monastery,གསང་སྒྲོག་བདེ་ཆེན་དགོན།,桑主寺,Sangdrok,,,བཤད་སྒྲུབ་འཕེལ་རྒྱས་གླིང་།,宣密大乐寺,,xuabmi dale si,,35.96088,101.82648,Sakya,1350,1600
+G279,monastery,ཁྲོ་ཕུ་དགོན།,超浦寺,Tropu Monastery,,,ཁྲོ་ཕུ་བྱམས་ཆེན་ཆོས་སྡེ།,绰浦寺,Trupu Monastery,chaopu si,,29.21667,88.4,Tropu Kagyu,1212,
+G3997,monastery,བླ་རུང་སྒར།,色达五明佛学院,Larung Gar,,,བླ་རུང་སློབ་གླིང་།,色达喇荣寺五明佛学院,Centre for the Five Traditional Sciences and Higher Buddhist Studies,seda wuming foxueyuan,,32.153269,100.466955,Nyingma,1880,
+G2844,monastery,སྤོས་ཁང་དགོན།,波康寺,Pokhang ,,,ཇོ་གདན་སྤོས་ཁང་དགོན།,波康措巴,,bokang cuoba,,29.13333,89.36667,"Kadam, Geluk",1213,1650
+G1KR1630,monastery,པྲ་དུན་བརྩེ།,江扎东哲寺,Traduntse,,,བྱང་པྲ་དུན་བརྩེ།,诈顿拉康,,zhadun lakang,,29.65,84.16666,Geluk,650,1650
+G170,monastery,མཆོད་རྟེན་ཐང་དགོན།,天堂寺,Chorten Tang Tashi Dargye Ling ,,,བཀྲ་ཤིས་དར་རྒྱས་གླིང་།,,Chortentang Monastery,tiantang si,,36.95,102.5,"Bon, Kagyu, Geluk",820,1639
+G1511,monastery,དཔལ་འཁོར་ཆོས་སྡེ།,白居寺,Pelkhor Chode,,,དཔལ་འཁོར་བདེ་ཆེན།,江孜白居寺,Gyangtse Monastery,jiangzi baiju si,,28.93333,89.6,"Sakya, Geluk, Drukpa Kagyu",1418,1650
+G3CN1561,monastery,ཤེས་རབ་གླིང་།,智慧林寺,Sherabling,,,དཔལ་སྤུངས་ཤེས་རབ་གླིང་།,八蚌智慧林寺,Palpung Sherabling,zhihuilin si,,32.030651,76.412237,KarmaKagyu,1975,
+G314,monastery,དན་ཏིག་དགོན།,丹笛寺,Dentik ,,,དན་ཏིག་ཤེལ་གྱི་ཡང་དགོན།,旦斗寺,,dandou si,,35.88778,102.5,"Nyingma, Kadam, Geluk",911,1600
+G435,monastery,ཅོ་ནེ་དགོན་ཆེན།,卓尼寺,Chone Ganden Shedrub Ling,,,ཅོ་ནེ་དགོན་ཆེན་དགའ་ལྡན་བཤད་སྒྲུབ་གླིང་།,卓尼丹丁寺,,zhuoni chanding si,,34.59989,103.5121,"Sakya, Geluk",1459,1459
+G11,monastery,རྡོ་རྗེ་བྲག,多吉扎寺,Dorje Drak,,,ཨེ་ཝཾ་ལྕོག་སྒར།,土登多吉扎寺,Dorje Drak Ewam Chogar,tudeng duojizha si,,29.35536,91.13459,Nyingma,1650,
+G1KR1596,monastery,བཞད་གྲྭ་ཚང་དགོན།,查藏寺,Zhe Dratsang,,,བཞད་གྲྭ་ཚང་ཆེན་མོ།,查藏旗磨热嘎曲丁寺,,chazang si,,29.45,88.25,"Sakya, Nyingma, Geluk",1450,1650
+G390,monastery,རྟག་བརྟན་ཕུན་ཚོགས་གླིང་།,彭措林寺,Takten Damcho Ling ,,,རྟག་བརྟན་དམ་ཆོས་ངེས་དོན་དགེ་བའི་ཚལ།,平措林寺,,gandan pengcuolin si,,29.368129,88.002188,"Jonang, Geluk",1615,1635
+G3429,temple,སྲས་མཁར་དགུ་ཐོག,色喀古陀寺,Sekhar Gutok,,,ལྷོ་བྲག་སྲས་མཁར་དགུ་ཐོག,塞卡尔古陀寺,,seka gutuo si,,28.18559,90.83574,"Karma Kagyu, Kagyu, Geluk",1050,1750
+G214,monastery,བན་ཆེན་དགོན།,边钦寺,Ga Banchen Monastery,,,སྒ་བན་ཆེན་དགོན།,班庆寺,Banchen Gon Puntsok Dargyeling,bianqin si,,32.84455,97.14682,Karma Kagyu,1380,
+G3125,monastery,དིང་རི་གླང་འཁོར་དགོན།,朗果寺,Dingri Langkhor,,,དིང་རི་གླང་སྐོར།,定日朗果寺,,dingri langguo si,,28.51667,86.48333,Zhije and Chod,1097,
+G1KR2385,monastery,ཨ་རིག་དགོན།,阿柔大寺,Arik Gonchen,,,ཨ་རིག་དགོན་ཆེན།,阿力克大寺,,alike dasi,,38.0461,100.39917,Geluk,1553,
+G14,monastery,སྨིན་གྲོལ་གླིང་།,敏珠林寺,Mindroling,,,འོག་མིན་ཨོ་རྒྱན་སྨིན་གྲོལ་གླིང་།,敏卓林寺,,minzhulin si,,29.18693,91.40557,Nyingma,1676,
+G4552,temple,ར་མོ་ཆེ་གཙུག་ལག་ཁང་།,小昭寺,Ramoche ,,,རྒྱ་བཏབ་ར་མོ་ཆེ་གཙུག་ལག་ཁང་།,甲达热木齐祖拉康,,jiada remuqi zulakang,,29.65869,91.12968,Rime,650,
+G2266,monastery,ལྷུན་གྲུབ་ཆོས་སྡིངས་དགོན།,伦珠曲丁寺,Rutok Tashi Choling,,,བཀྲ་ཤིས་ཆོས་གླིང་དགོན།,伦珠曲典寺,,lunzhu quding si,,33.41,79.64,Geluk,,1680
+G4,monastery,སྨན་རི་དགོན།,梅日寺,Menri,,,བཀྲ་ཤིས་སྨན་རི།,门日寺,,menri si,,29.446108,89.537805,Bon,1405,
+G3747,monastery,ལི་ཐང་རྙིང་མ་གྲྭ་ཚང་།,宁玛扎仓,Litang Nyingma Dratsang,,,ལེ་ཐང་རྙིང་མ་གྲྭ་ཚང་།,宁玛扎冲寺/宁玛寺,,ningma zhacang,,29.91667,100.31667,Nyingma,1700,
+G1KR1539,monastery,ལྕང་ར་དགོན།,江热寺,Changra,,,མྱང་སྟོད་ལྕང་ར་དཔལ་འབར་གྱི་དགོན།,,,jiangre si,,28.9,89.56667,"Kadam, Geluk",1050,1413
+G301,monastery,ཤིས་ཚང་དགོན་གསར།,西仓新寺,Shitsang Gonsar,,,ཤིས་ཚང་སྒར་གསར་དགའ་ལྡན་བཤད་སྒྲུབ་ཆོས་འཁོར་གླིང་།,嘎丹谢珠曲科林,,gadan xiezhu qukelin,,34.56912,102.55889,Geluk,1839,
+G2066,monastery,འཆད་ཁ་དགོན།,怯喀寺,Chekha,,,འཆད་ཁ་རྙིང་པ།,,,qieka si,,29.82363,91.86028,Kadam,1150,1500
+G357,monastery,བརྩེ་ཆེན་ཆོས་སྡེ།,紫金寺,Tsechen,,,བརྩེ་ཆེན་ཆོས་སྡེ་ཐུབ་བསྟན་རབ་རྒྱས་གླིང་།,,,zijin si,,28.93333,89.53333,"Geluk, Jonang, Sakya",1366,1650
+G1877,monastery,ཆུ་ནག་དགོན།,曲乃亥寺,Chunak Tashi Choling,,,ཆུ་ནག་དགོན་བཀྲ་ཤིས་ཆོས་གླིང་།,曲乃海寺,,qunaihai si,,36.15132,101.0768,Geluk,1766,
+G2539,monastery,རྐང་ཚ་དགོན་ཆེན།,岗察寺,Kangtsa Ganden Chopel Ling,,,དགའ་ལྡན་ཆོས་འཕེལ་གླིང་།,刚察大寺,,gangca si,,37.53525,100.13,Geluk,1915,
+G2194,monastery,མཐོ་ལྡིང་དགོན་པ།,托林寺,Toling Monastery,,,ཐོ་ལིང་གཙུག་ལག་ཁང་།,,,tuolin si,,31.49,79.8,"Kadam, Geluk",996,1450
