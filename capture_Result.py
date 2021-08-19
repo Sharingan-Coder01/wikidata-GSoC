@@ -14,7 +14,7 @@ def capture(myList):
     driver.quit() 
 
 def main():
-    df = pd.read_csv('ExtractedData/Rich_Ent_Persons.csv')
+    df = pd.read_csv('ExtractedData/Rich_Ent_Places.csv')
     listn = df.label_bo # Name column
     capture(listn)
 
