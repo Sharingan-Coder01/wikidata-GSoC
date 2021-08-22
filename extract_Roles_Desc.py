@@ -1,3 +1,4 @@
+# Code to get the labels of person roles present on BDRC
 import rdflib
 import os 
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, Namespace, NamespaceManager, XSD, URIRef

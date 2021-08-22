@@ -1,3 +1,4 @@
+# Code to extract Teacher and Student associated with each person
 import rdflib
 import os 
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, Namespace, NamespaceManager, XSD, URIRef
@@ -91,8 +92,8 @@ def run(file_path, id, entity_list):
 
     # Dictionary for number of teachers and students 
     COUNTPROP = {
-        "teachers" : 40, 
-        "students" : 80
+        "teachers" : 40, #Maximum number of teachers associated with a Person
+        "students" : 80  #Maximum number of students associated with a Person
     }
 
     nlist = createList(id, ext_val, COUNTPROP)

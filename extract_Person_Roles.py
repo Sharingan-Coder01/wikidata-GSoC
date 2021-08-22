@@ -1,3 +1,5 @@
+# Code to extract multiple roles associated with a person. The roles extracted were mapped with the labels extracted by extract_Roles_Desc.py 
+# The CSV sheet created was later attached with every_person_data.csv 
 import rdflib
 import os 
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, Namespace, NamespaceManager, XSD, URIRef
@@ -59,7 +61,6 @@ def createCSV(mylist):
 		writer = csv.writer(f)
 		for row in mylist:
 			writer.writerow(row)
-
 
 def main():
     mylist = []

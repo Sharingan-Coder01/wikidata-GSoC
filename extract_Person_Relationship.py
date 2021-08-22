@@ -1,3 +1,4 @@
+# Code to extract all kinship relations associated with a person
 import rdflib
 import os 
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, Namespace, NamespaceManager, XSD, URIRef

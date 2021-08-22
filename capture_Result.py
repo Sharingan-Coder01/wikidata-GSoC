@@ -1,3 +1,4 @@
+# Code to execute Google search by taking input of Tibetan labels column and also capture screenshot of the search result
 import pandas as pd
 from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
@@ -14,7 +15,7 @@ def capture(myList):
     driver.quit() 
 
 def main():
-    df = pd.read_csv('ExtractedData/Rich_Ent_Places.csv')
+    df = pd.read_csv('ExtractedData/Rich_Ent_Persons.csv')
     listn = df.label_bo # Name column
     capture(listn)
 

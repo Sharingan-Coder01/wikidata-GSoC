@@ -1,3 +1,4 @@
+# Code to extract Places Entities data which includes: Places label, aliases, place type, coordinate location, date of foundation & Tradition associated
 import rdflib
 import os 
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, Namespace, NamespaceManager, XSD, URIRef

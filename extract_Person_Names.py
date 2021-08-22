@@ -1,3 +1,4 @@
+# First code written to test and learn RDFLib extracting the names of persons
 import rdflib
 import os 
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, Namespace, NamespaceManager, XSD, URIRef

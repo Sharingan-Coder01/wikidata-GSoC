@@ -1,3 +1,4 @@
+# Code to extract People Entities data which include : Labels, Aliases, Gender, DOB, DOD
 import rdflib
 import os 
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, Namespace, NamespaceManager, XSD, URIRef
