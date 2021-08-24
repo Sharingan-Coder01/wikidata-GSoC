@@ -137,6 +137,8 @@ def createList(personID, vals, COUNTPROP, fValue, mValue, wValue, hValue):
 
     for tp, nbcols in COUNTPROP.items():
         if tp not in vals:
+            for i in range(nbcols):
+                row.append("")
             continue
         if nbcols < len(vals[tp]):
             print("!!Error!! There should be at least %i columns for %s aliases" % (len(vals[tp]), tp))
